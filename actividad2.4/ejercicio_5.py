@@ -5,17 +5,19 @@ print(random_num)
 while True:
     try:
         user_num = int(input('Ingrese un número: '))
-    except:
-        print('err')
 
-    if user_num == random_num:
-        print('HAZ ACERTADO!')
-        break
-    else:
-        print('FALLASTE')
-        if user_num < random_num:
-            print('El número que buscas es mayor')
+
+        if user_num == random_num:
+            print('HAZ ACERTADO!')
+            break
         else:
-            print('El número que buscas es menor')
-
+            print('FALLASTE')
+            if user_num < random_num:
+                print('El número que buscas es mayor')
+            else:
+                print('El número que buscas es menor')
+    except ValueError:
+        print(ValueError)
+    except Exception as e:
+        print('err', e.with_traceback)
         
